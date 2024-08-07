@@ -30,7 +30,7 @@
                     <a class="nav-link submenu-link <?php if ($menu == "Dokumen PSP") echo "active"; ?>" href="dokumen-psp.php">PSP</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">Tanaman Pangan</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Tanaman Pangan") echo "active"; ?>" href="dokumen-tanaman-pangan.php">Tanaman Pangan</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link submenu-link" href="#">Hortikultura</a>
