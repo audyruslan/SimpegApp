@@ -1,0 +1,139 @@
+body, html {
+  height: 100%;
+}
+
+.bg-custom {
+    background: url('../../assets/img/image_bg.png') no-repeat center calc(0% - 150px) fixed;
+    background-size: cover;
+}
+
+.login-card {
+  border-radius: 1rem;
+  width: 60%;
+  padding: 0;    
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-form{
+  margin-left: 30px;
+}
+
+.login-form img {
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.login-form .form-control {
+  margin-bottom: 1rem;
+}
+
+.login-form .form-control:last-child {
+  margin-bottom: 2rem;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #4067A7;
+  border-radius: 15px;
+}
+
+.login-form a {
+  display: block;
+  text-align: center;
+}
+
+.login-form input {
+    height: 50px; 
+    border-radius: 15px;
+    border: 2px solid #4067A7; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.login-form .password-wrapper {
+  position: relative;
+}
+.login-form .password-wrapper .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #4067A7;
+  font-size: 24px;
+}
+
+/* Register Form */
+.register-card {
+  border-radius: 1rem;
+  width: 50%;
+  margin: 50px;    
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.register-form {
+  padding: 50px;
+}
+
+.register-form .form-control {
+  margin-bottom: 1rem;
+}
+
+.register-form .form-control:last-child {
+  margin-bottom: 2rem;
+}
+
+.register-form .btn {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #4067A7;
+  border-radius: 15px;
+}
+
+.register-form a {
+  display: block;
+  text-align: center;
+}
+
+.register-form input {
+    height: 50px; 
+    border-radius: 15px;
+    border: 2px solid #4067A7; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.register-form input:focus {
+    outline: none;
+    border: none;
+}
+
+.register-form .form-title {
+  margin-top: -30px;
+}
+
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+   text-decoration: none;
+}
