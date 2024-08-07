@@ -33,22 +33,22 @@
                     <a class="nav-link submenu-link <?php if ($menu == "Dokumen Tanaman Pangan") echo "active"; ?>" href="dokumen-tanaman-pangan.php">Tanaman Pangan</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">Hortikultura</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Hortikultura") echo "active"; ?>" href="dokumen-hortikultura.php">Hortikultura</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">Penyuluhan</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Penyuluhan") echo "active"; ?>" href="dokumen-penyuluhan.php">Penyuluhan</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">UPT Proteksi</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen UPT Proteksi") echo "active"; ?>" href="dokumen-proteksi.php">UPT Proteksi</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">UPT PMSB</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen UPT PMSB") echo "active"; ?>" href="dokumen-pmsb.php">UPT PMSB</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">UPT Pemberitaan</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen UPT Pemberitaan") echo "active"; ?>" href="dokumen-pemberitaan.php">UPT Pemberitaan</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">UPT Diklat</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen UPT Diklat") echo "active"; ?>" href="dokumen-diklat.php">UPT Diklat</a>
                   </li>
                 </ul>
               </div>
