@@ -7,7 +7,10 @@
 ?>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 main-content">
-    <div class="row">
+
+    <?php require_once 'layouts/data-surat.php'; ?>
+
+    <div class="row mt-3">
         <div class="col-lg-8">
             <div class="card form-input">
                 <div class="card-body">

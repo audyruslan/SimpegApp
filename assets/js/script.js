@@ -21,6 +21,7 @@ $(document).ready(function() {
     }
 
     setupCollapseHandler('#collapseOne', '#berkasSuratMasuk');
+    setupCollapseHandler('#collapseOne', '#berkasSurat');
     setupCollapseHandler('#collapseTwo', '#berkasSuratKeluar');
     setupCollapseHandler('#collapseThree', '#suratKeputusan');
     setupCollapseHandler('#collapseFour', '#suratTugas');

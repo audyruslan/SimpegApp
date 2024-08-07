@@ -8,6 +8,8 @@
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 main-content">
 
+    <?php require_once 'layouts/data-surat.php'; ?>
+
         <div class="row mt-2">
             <div class="col-lg-12">
                 <div id="accordion">
@@ -44,11 +46,11 @@
                                     <button id="btnSurat" class="btn btn-sm rounded tombol-cari mr-3">Cari</button>
                                     <input type="text" class="form-control col-4 form-cari mr-5" id="cariSurat" placeholder="Cari Surat Masuk...">
                                 <button class="badge badge-pill badge-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Tutup
+                                    Lihat
                                 </button>
                             </div>
                         </div>
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             <div id="berkasPegawai" class="row">
                               <?php 
@@ -85,12 +87,11 @@
                               ?>
                             </div>
                         </div>
-                      </div>
                     </div>
                 </div>
             </div>
         </div>
-      </main>
+    </div>
        
 </main>
 

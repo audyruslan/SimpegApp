@@ -44,11 +44,11 @@
                                     <button id="btnSurat" class="btn btn-sm rounded tombol-cari mr-3">Cari</button>
                                     <input type="text" class="form-control col-4 form-cari mr-5" id="cariSurat" placeholder="Cari Surat Tugas...">
                                 <button class="badge badge-pill badge-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Tutup
+                                    Lihat
                                 </button>
                             </div>
                         </div>
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             <div id="berkasPegawai" class="row">
                               <?php 
