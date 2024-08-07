@@ -18,6 +18,17 @@ if($_SESSION["level"] == 1){
   $totPegawaiNonPNS = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_pegawai WHERE jabatan_id <> 6"));
   // Total Data Berkas
   $totBerkas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_berkas"));
+
+  // Total Data Surat Masuk
+  $totSuratMasuk = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Masuk'"));
+  // Total Data Surat Keluar
+  $totSuratKeluar = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keluar'"));
+  // Total Data Surat Keputusan
+  $totSuratKeputusan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keputusan'"));
+  // Total Data Surat Tugas
+  $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas'"));
+  // Total Data Surat Lainnya
+  $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya'"));
 } else {
   $nip_pegawai = $_SESSION["nip_pegawai"];
   $sqlPegawai = mysqli_query($conn, "SELECT * FROM tb_pegawai WHERE nip_pegawai = '$nip_pegawai'");
@@ -28,15 +39,15 @@ if($_SESSION["level"] == 1){
   $role = mysqli_fetch_assoc($sqlRole);
 
   // Total Data Surat Masuk
-  $totSuratMasuk = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'SURAT MASUK'"));
+  $totSuratMasuk = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Masuk'"));
   // Total Data Surat Keluar
-  $totSuratKeluar = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'SURAT KELUAR'"));
+  $totSuratKeluar = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keluar'"));
   // Total Data Surat Keputusan
-  $totSuratKeputusan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'SURAT KEPUTUSAN'"));
+  $totSuratKeputusan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keputusan'"));
   // Total Data Surat Tugas
-  $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'SURAT TUGAS'"));
+  $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas'"));
   // Total Data Surat Lainnya
-  $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'SURAT LAINNYA'"));
+  $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya'"));
 }
 
 ?>
