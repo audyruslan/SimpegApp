@@ -79,7 +79,7 @@
                                         <h3><?= $surat["perihal_surat"]; ?></h3>
                                         <p><?= $surat["tgl_surat"]; ?></p>
                                         <div class="d-flex tombol">
-                                            <a href="lihat-surat-masuk.php?surat_id=<?= $surat["surat_id"]; ?>" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                                            <a href="lihat-detail-surat.php?surat_id=<?= $surat["surat_id"]; ?>&tipe_surat=Surat Masuk" class="badge badge-pill badge-primary mr-1">Lihat</a>
                                             <a href="#" class="badge badge-pill badge-dark ml-1">Cetak</a>
                                         </div>
                                         </div>
@@ -155,7 +155,7 @@
                                         <h3><?= $surat["perihal_surat"]; ?></h3>
                                         <p><?= $surat["tgl_surat"]; ?></p>
                                         <div class="d-flex tombol">
-                                            <a href="lihat-surat-keluar.php?surat_id=<?= $surat["surat_id"]; ?>" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                                            <a href="lihat-detail-surat.php?surat_id=<?= $surat["surat_id"]; ?>&tipe_surat=Surat Keluar" class="badge badge-pill badge-primary mr-1">Lihat</a>
                                             <a href="#" class="badge badge-pill badge-dark ml-1">Cetak</a>
                                         </div>
                                         </div>
@@ -231,7 +231,7 @@
                                         <h3><?= $surat["perihal_surat"]; ?></h3>
                                         <p><?= $surat["tgl_surat"]; ?></p>
                                         <div class="d-flex tombol">
-                                            <a href="lihat-surat-keputusan.php?surat_id=<?= $surat["surat_id"]; ?>" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                                            <a href="lihat-detail-surat.php?surat_id=<?= $surat["surat_id"]; ?>&tipe_surat=Surat Keputusan" class="badge badge-pill badge-primary mr-1">Lihat</a>
                                             <a href="#" class="badge badge-pill badge-dark ml-1">Cetak</a>
                                         </div>
                                         </div>
@@ -307,7 +307,7 @@
                                         <h3><?= $surat["perihal_surat"]; ?></h3>
                                         <p><?= $surat["tgl_surat"]; ?></p>
                                         <div class="d-flex tombol">
-                                            <a href="lihat-surat-keputusan.php?surat_id=<?= $surat["surat_id"]; ?>" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                                            <a href="lihat-detail-surat.php?surat_id=<?= $surat["surat_id"]; ?>&tipe_surat=Surat Tugas" class="badge badge-pill badge-primary mr-1">Lihat</a>
                                             <a href="#" class="badge badge-pill badge-dark ml-1">Cetak</a>
                                         </div>
                                         </div>
@@ -383,7 +383,7 @@
                                         <h3><?= $surat["perihal_surat"]; ?></h3>
                                         <p><?= $surat["tgl_surat"]; ?></p>
                                         <div class="d-flex tombol">
-                                            <a href="lihat-surat-lainnya.php?surat_id=<?= $surat["surat_id"]; ?>" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                                            <a href="lihat-detail-surat.php?surat_id=<?= $surat["surat_id"]; ?>&tipe_surat=Surat Lainnya" class="badge badge-pill badge-primary mr-1">Lihat</a>
                                             <a href="#" class="badge badge-pill badge-dark ml-1">Cetak</a>
                                         </div>
                                         </div>

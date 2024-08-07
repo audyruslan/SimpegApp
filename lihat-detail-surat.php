@@ -7,54 +7,16 @@
 
     // Get Data Surat
     $suratID = $_GET["surat_id"];
+    $tipeSurat = $_GET["tipe_surat"];
     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat WHERE surat_id = $suratID");
     $surat = mysqli_fetch_assoc($sqlSurat);
 ?>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 main-content">
 
-        <div class="row">
-          <div class="card-col mb-3">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">Surat Masuk</p>
-                <h2 class="card-title">1.250</h2>
-              </div>
-            </div>
-          </div>
-          <div class="card-col mb-3">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">Surat Keluar</p>
-                <h2 class="card-title">200</h2>
-              </div>
-            </div>
-          </div>
-          <div class="card-col mb-3">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">Surat Keputusan</p>
-                <h2 class="card-title">350</h2>
-              </div>
-            </div>
-          </div>
-          <div class="card-col mb-3">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">Surat Tugas</p>
-                <h2 class="card-title">290</h2>
-              </div>
-            </div>
-          </div>
-          <div class="card-col mb-3">
-            <div class="card">
-              <div class="card-body">
-                <p class="card-text">Surat Lainnya</p>
-                <h2 class="card-title">20</h2>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php 
+            require_once 'layouts/data-surat.php';
+        ?>
 
         <div class="row mt-2">
             <div class="col-lg-12">
@@ -62,7 +24,7 @@
                     <div class="card">
                        <div class="card-header d-flex justify-content-between" id="headingOne">
                             <p class="mb-0 text-light">
-                                Detail Data Surat Masuk
+                                Detail Data <?= $tipeSurat; ?>
                             </p>
                             <button class="badge badge-pill badge-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Tutup
@@ -107,10 +69,12 @@
                                         <label for="tgl_surat">Tanggal Surat</label>
                                         <input type="date" class="form-control" id="tgl_surat" name="tgl_surat" value="<?= $surat["tgl_surat"]; ?>" placeholder="Tanggal Surat" autocomplete="off" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="tgl_surat_masuk">Tanggal Surat Masuk</label>
-                                        <input type="date" class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" value="<?= $surat["tgl_surat_masuk"]; ?>" placeholder="Tanggal Surat Masuk" autocomplete="off" required>
-                                    </div>
+                                    <?php if ($tipeSurat == "Surat Masuk") : ?>
+                                        <div class="form-group">
+                                            <label for="tgl_surat_masuk">Tanggal Surat Masuk</label>
+                                            <input type="date" class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" value="<?= $surat["tgl_surat_masuk"]; ?>" placeholder="Tanggal Surat Masuk" autocomplete="off" required>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="form-group">
                                         <label for="no_surat">Nomor Surat</label>
                                         <input type="text" class="form-control" id="no_surat" name="no_surat" value="<?= $surat["no_surat"]; ?>" placeholder="No. Surat" autocomplete="off" required>
@@ -122,7 +86,17 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="drop-zone">
-                                        <embed id="previewSuratFile" class="drop-zone__pdf" src="surat-masuk/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php if ($tipeSurat == "Surat Masuk") { ?>
+                                            <embed id="previewSuratFile" class="drop-zone__pdf" src="surat-masuk/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php } elseif ($tipeSurat == "Surat Keluar") { ?>
+                                            <embed id="previewSuratFile" class="drop-zone__pdf" src="surat-keluar/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php } elseif ($tipeSurat == "Surat Keputusan") { ?>
+                                            <embed id="previewSuratFile" class="drop-zone__pdf" src="surat-keputusan/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php } elseif ($tipeSurat == "Tugas") { ?>
+                                            <embed id="previewSuratFile" class="drop-zone__pdf" src="tugas/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php } elseif ($tipeSurat == "Surat Lainnya") { ?>
+                                            <embed id="previewSuratFile" class="drop-zone__pdf" src="surat-lainnya/document/<?= $surat["surat_dir"]; ?>" type="application/pdf" style="display: <?= strpos($surat["surat_dir"], '.pdf') !== false ? 'block' : 'none'; ?>; width: 100%; height: 100%;">
+                                        <?php } ?>
                                     </div>
                                     <div class="d-flex justify-content-between mt-2">
                                         <input type="hidden" name="surat_dir_lama" value="<?= $surat["surat_dir"]; ?>">
