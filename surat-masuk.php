@@ -10,7 +10,7 @@
 
     <?php require_once 'layouts/data-surat.php'; ?>
 
-        <div class="row mt-2">
+        <div class="row mt-3">
             <div class="col-lg-12">
                 <div id="accordion">
                     <div class="card">
