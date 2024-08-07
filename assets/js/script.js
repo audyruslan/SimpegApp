@@ -1,28 +1,30 @@
 $(document).ready(function() {
+
+    $('.select-cari').hide();
+    $('.tombol-cari').hide();
+    $('.form-cari').hide();
     
-    $('#collapseOne').on('shown.bs.collapse', function () {
-        $('#headingOne .badge').text('Tutup');
-        $('.select-cari').show();
-        $('.tombol-cari').show();
-        $('.form-cari').show();
-    }).on('hidden.bs.collapse', function () {
-        $('#headingOne .badge').text('Lihat');
-        $('.select-cari').hide();
-        $('.tombol-cari').hide();
-        $('.form-cari').hide();
-    });
+    function toggleElements(selector, show) {
+        $(selector + ' .select-cari').toggle(show);
+        $(selector + ' .tombol-cari').toggle(show);
+        $(selector + ' .form-cari').toggle(show);
+    }
 
-    $('#collapseTwo').on('shown.bs.collapse', function () {
-        $('#headingTwo .badge').text('Tutup');
-    }).on('hidden.bs.collapse', function () {
-        $('#headingTwo .badge').text('Lihat');
-    });
+    function setupCollapseHandler(cardId, elementsId) {
+        $(cardId).on('shown.bs.collapse', function () {
+            $(elementsId + ' .badge').text('Tutup');
+            toggleElements(elementsId, true);
+        }).on('hidden.bs.collapse', function () {
+            $(elementsId + ' .badge').text('Lihat');
+            toggleElements(elementsId, false);
+        });
+    }
 
-    $('#collapseThree').on('shown.bs.collapse', function () {
-        $('#headingThree .badge').text('Tutup');
-    }).on('hidden.bs.collapse', function () {
-        $('#headingThree .badge').text('Lihat');
-    });
+    setupCollapseHandler('#collapseOne', '#berkasSuratMasuk');
+    setupCollapseHandler('#collapseTwo', '#berkasSuratKeluar');
+    setupCollapseHandler('#collapseThree', '#suratKeputusan');
+    setupCollapseHandler('#collapseFour', '#suratTugas');
+    setupCollapseHandler('#collapseFive', '#suratLainnya');
 
 
     // Cari Berkas Pegawai dari Admin

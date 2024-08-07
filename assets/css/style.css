@@ -193,6 +193,53 @@
     justify-content: center;
 }
 
+/* Surat */
+.dataSurat h2 {
+  color: #4067A7;
+  font-weight: bold;
+  font-size: 35px;
+}
+.dataSurat .card {
+text-align: left;
+border-radius: 15px;
+background-color: white !important;
+border: none;
+box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+width: 10rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.dataSurat .card .card-body{
+background-color: white !important;
+}
+
+.dataSurat .tolak{
+background-color: #D2A9A4;
+}
+.dataSurat .card img {
+margin-top: 20px;
+width: 100px;
+}
+.dataSurat .card p {
+color: #4067A7;
+font-size: 15px;
+margin-top: -10px;
+}
+.dataSurat .card h3 {
+color: #4067A7;
+margin-top: -10px;
+font-weight: bold;
+font-size: 15px;
+}
+.dataSurat .card .tombol{
+margin-top: -10px;
+justify-content: center;
+}
+
+
 /* detailBerkasPegawai */
 #detailBerkas h2 {
   color: #4067A7;
@@ -278,12 +325,12 @@ justify-content: center;
 }
 
 .box-cari input {
-      height: 50px; 
-      border-radius: 15px;
-      border: 2px solid #4067A7; 
-      padding: 10px; 
-      box-sizing: border-box;
-  }
+  height: 50px; 
+  border-radius: 15px;
+  border: 2px solid #4067A7; 
+  padding: 10px; 
+  box-sizing: border-box;
+}
 
 .box-cari input:focus {
     outline: none;

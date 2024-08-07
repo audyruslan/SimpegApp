@@ -16,15 +16,15 @@
                 Berkas Pegawai
               </a>
             </li>
-            <li class="nav-item <?php if ($menu == "Dokumen Sekretariat") echo "active-menu"; ?>">
+            <li class="nav-item <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk") echo "active-menu"; ?>">
               <a class="nav-link" data-toggle="collapse" href="#dokumenAdministrasiSubmenu" role="button" aria-expanded="false" aria-controls="dokumenAdministrasiSubmenu">
                 <i class="fas fa-angle-left right"></i>
                 Dokumen Administrasi
               </a>
-              <div class="collapse <?php if ($menu == "Dokumen Sekretariat") echo "show"; ?>" id="dokumenAdministrasiSubmenu">
+              <div class="collapse <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk"  || $menu == "Detail Surat Keluar" || $menu == "Detail Keputusan" || $menu == "Detail Surat Tugas" || $menu == "Detail Surat Lainnya") echo "show"; ?>" id="dokumenAdministrasiSubmenu">
                 <ul class="nav flex-column ml-3">
                   <li class="nav-item">
-                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Sekretariat") echo "active"; ?>" href="dokumen-sekretariat.php">Bidang Sekertariat</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk"  || $menu == "Detail Surat Keluar" || $menu == "Detail Surat Keputusan" || $menu == "Detail Surat Tugas" || $menu == "Detail Surat Lainnya") echo "active"; ?>" href="dokumen-sekretariat.php">Bidang Sekertariat</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link submenu-link" href="#">PSP</a>
@@ -102,7 +102,7 @@
                 Biodata
               </a>
             </li>
-            <li class="nav-item <?php if ($menu == "Surat Masuk" || $menu == "Detail Surat Masuk" || $menu == "Tambah Surat Masuk" || $menu == "Surat Keluar" || $menu == "Detail Surat Keluar" || $menu == "Tambah Surat Keluar" || $menu == "Surat Keputusan" || $menu == "Detail Surat Keputusan" || $menu == "Tambah Surat Keputusan" || $menu == "Surat Tugas" || $menu == "Detail Surat Tugas" || $menu == "Tambah Surat Tugas" || $menu == "Surat Lainnya" || $menu == "Detail Surat Lainnya" || $menu == "Tambah Surat Lainnya") echo "active-menu"; ?>">
+            <li class="nav-item <?php if ($menu == "Surat Masuk" || $menu == "Detail Surat Masuk" || $menu == "Tambah Surat Masuk"  || $menu == "Surat Keluar" || $menu == "Detail Surat Keluar" || $menu == "Tambah Surat Keluar" || $menu == "Surat Keputusan" || $menu == "Detail Surat Keputusan" || $menu == "Tambah Surat Keputusan" || $menu == "Surat Tugas" || $menu == "Detail Surat Tugas" || $menu == "Tambah Surat Tugas" || $menu == "Surat Lainnya" || $menu == "Detail Surat Lainnya" || $menu == "Tambah Surat Lainnya") echo "active-menu"; ?>">
               <a class="nav-link" data-toggle="collapse" href="#submenu" role="button" aria-expanded="false" aria-controls="submenu">
                 <i class="fas fa-angle-left right"></i>
                 Dokumen Administrasi
