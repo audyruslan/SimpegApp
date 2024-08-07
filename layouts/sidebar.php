@@ -16,18 +16,18 @@
                 Berkas Pegawai
               </a>
             </li>
-            <li class="nav-item <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk") echo "active-menu"; ?>">
+            <li class="nav-item <?php if ($menu == "Dokumen Sekretariat" || $menu == "Dokumen PSP" || $menu == "Dokumen Tanaman Pangan" || $menu == "Dokumen Hortikultura" || $menu == "Dokumen Penyuluhan" || $menu == "Dokumen UPT Proteksi" || $menu == "Dokumen UPT PMSB" || $menu == "Dokumen UPT Pemberitaan" || $menu == "Dokumen UPT Diklat" || $menu == "Lihat Detail Surat") echo "active-menu"; ?>">
               <a class="nav-link" data-toggle="collapse" href="#dokumenAdministrasiSubmenu" role="button" aria-expanded="false" aria-controls="dokumenAdministrasiSubmenu">
                 <i class="fas fa-angle-left right"></i>
                 Dokumen Administrasi
               </a>
-              <div class="collapse <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk"  || $menu == "Detail Surat Keluar" || $menu == "Detail Keputusan" || $menu == "Detail Surat Tugas" || $menu == "Detail Surat Lainnya") echo "show"; ?>" id="dokumenAdministrasiSubmenu">
+              <div class="collapse <?php if ($menu == "Dokumen Sekretariat" || $menu == "Dokumen PSP" || $menu == "Dokumen Tanaman Pangan" || $menu == "Dokumen Hortikultura" || $menu == "Dokumen Penyuluhan" || $menu == "Dokumen UPT Proteksi" || $menu == "Dokumen UPT PMSB" || $menu == "Dokumen UPT Pemberitaan" || $menu == "Dokumen UPT Diklat" || $menu == "Lihat Detail Surat") echo "show"; ?>" id="dokumenAdministrasiSubmenu">
                 <ul class="nav flex-column ml-3">
                   <li class="nav-item">
-                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Sekretariat" || $menu == "Detail Surat Masuk"  || $menu == "Detail Surat Keluar" || $menu == "Detail Surat Keputusan" || $menu == "Detail Surat Tugas" || $menu == "Detail Surat Lainnya") echo "active"; ?>" href="dokumen-sekretariat.php">Bidang Sekertariat</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen Sekretariat") echo "active"; ?>" href="dokumen-sekretariat.php">Bidang Sekertariat</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link submenu-link" href="#">PSP</a>
+                    <a class="nav-link submenu-link <?php if ($menu == "Dokumen PSP") echo "active"; ?>" href="dokumen-psp.php">PSP</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link submenu-link" href="#">Tanaman Pangan</a>

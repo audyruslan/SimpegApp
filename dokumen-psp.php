@@ -1,6 +1,6 @@
 <?php 
-    $title = "Dokumen Sekretariat";
-    $menu = "Dokumen Sekretariat";
+    $title = "Dokumen PSP";
+    $menu = "Dokumen PSP";
     require 'layouts/header.php';
     require 'layouts/navbar.php';
     require 'layouts/sidebar.php';
@@ -12,7 +12,7 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 main-content">
     <div class="row judul">
         <div class="col-12">
-            <h2>Dokumen Administrasi Bidang Sekretariat</h2>
+            <h2>Dokumen Administrasi Bidang PSP</h2>
         </div>
     </div>
 
@@ -68,7 +68,7 @@
                                     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                     INNER JOIN tb_pegawai
                                                                     ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Masuk' AND tb_surat.bidang = 'Bidang Sekretariat'");
+                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Masuk' AND tb_surat.bidang = 'Bidang PSP'");
                                     if (mysqli_num_rows($sqlSurat) > 0) {
                                         while($surat = mysqli_fetch_assoc($sqlSurat)) {
                                 ?>
@@ -144,7 +144,7 @@
                                     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                     INNER JOIN tb_pegawai
                                                                     ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keluar' AND tb_surat.bidang = 'Bidang Sekretariat'");
+                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keluar' AND tb_surat.bidang = 'Bidang PSP'");
                                     if (mysqli_num_rows($sqlSurat) > 0) {
                                         while($surat = mysqli_fetch_assoc($sqlSurat)) {
                                 ?>
@@ -220,7 +220,7 @@
                                     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                     INNER JOIN tb_pegawai
                                                                     ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keputusan' AND tb_surat.bidang = 'Bidang Sekretariat'");
+                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keputusan' AND tb_surat.bidang = 'Bidang PSP'");
                                     if (mysqli_num_rows($sqlSurat) > 0) {
                                         while($surat = mysqli_fetch_assoc($sqlSurat)) {
                                 ?>
@@ -296,7 +296,7 @@
                                     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                     INNER JOIN tb_pegawai
                                                                     ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Tugas' AND tb_surat.bidang = 'Bidang Sekretariat'");
+                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Tugas' AND tb_surat.bidang = 'Bidang PSP'");
                                     if (mysqli_num_rows($sqlSurat) > 0) {
                                         while($surat = mysqli_fetch_assoc($sqlSurat)) {
                                 ?>
@@ -372,7 +372,7 @@
                                     $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                     INNER JOIN tb_pegawai
                                                                     ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Lainnya' AND tb_surat.bidang = 'Bidang Sekretariat'");
+                                                                    WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Lainnya' AND tb_surat.bidang = 'Bidang PSP'");
                                     if (mysqli_num_rows($sqlSurat) > 0) {
                                         while($surat = mysqli_fetch_assoc($sqlSurat)) {
                                 ?>
@@ -411,7 +411,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     function fetchSurat(tahun, bulan, keyword, pegawaiID, suratType, targetID) {
-        let url = `dokumen-administrasi/surat-${suratType}-sekretariat.php?tahun=${tahun}&bulan=${bulan}&keyword=${keyword}&pegawai_id=${pegawaiID}`;
+        let url = `dokumen-administrasi/surat-${suratType}-psp.php?tahun=${tahun}&bulan=${bulan}&keyword=${keyword}&pegawai_id=${pegawaiID}`;
         const xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
         xhr.onload = function() {

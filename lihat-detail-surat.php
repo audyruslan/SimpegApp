@@ -1,6 +1,6 @@
 <?php 
-    $title = "Detail Surat Masuk";
-    $menu = "Detail Surat Masuk";
+    $title = "Lihat Detail Surat";
+    $menu = "Lihat Detail Surat";
     require 'layouts/header.php';
     require 'layouts/navbar.php';
     require 'layouts/sidebar.php';
