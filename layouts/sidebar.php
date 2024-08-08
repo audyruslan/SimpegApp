@@ -102,6 +102,11 @@
                 Biodata
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link <?php if ($menu == "Berkas Pegawai" || $menu == "Tambah Berkas Pegawai" || $menu == "Lihat Berkas Pegawai") echo "active"; ?>" href="berkas-staf-pegawai.php">
+                Berkas Pegawai
+              </a>
+            </li>
             <li class="nav-item <?php if ($menu == "Surat Masuk" || $menu == "Detail Surat Masuk" || $menu == "Tambah Surat Masuk"  || $menu == "Surat Keluar" || $menu == "Detail Surat Keluar" || $menu == "Tambah Surat Keluar" || $menu == "Surat Keputusan" || $menu == "Detail Surat Keputusan" || $menu == "Tambah Surat Keputusan" || $menu == "Surat Tugas" || $menu == "Detail Surat Tugas" || $menu == "Tambah Surat Tugas" || $menu == "Surat Lainnya" || $menu == "Detail Surat Lainnya" || $menu == "Tambah Surat Lainnya") echo "active-menu"; ?>">
               <a class="nav-link" data-toggle="collapse" href="#submenu" role="button" aria-expanded="false" aria-controls="submenu">
                 <i class="fas fa-angle-left right"></i>

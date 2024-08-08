@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between" id="headingOne">
                         <p class="mb-0 text-light">
-                            Data Baru Surat Masuk
+                            Data Berkas Pegawai
                         </p>
                         <button class="badge badge-pill badge-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Tutup
