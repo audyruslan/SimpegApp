@@ -27,21 +27,6 @@ $(document).ready(function() {
     setupCollapseHandler('#collapseFour', '#suratTugas');
     setupCollapseHandler('#collapseFive', '#suratLainnya');
 
-    // dataTable
-    $("#pegawaiTable").DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "language": {
-            url: 'assets/json/id.json'
-        }
-    });
-
-
     // Cari Berkas Pegawai dari Admin
     $("#dataBerkasPegawai").on("keyup", function() {
         var searchText = $(this).val();
@@ -57,6 +42,48 @@ $(document).ready(function() {
         });
     });
 
+    // Cari Data Pegawai dari Admin
+    $("#cariPegawai").on("keyup", function() {
+        var searchText = $(this).val();
+
+        $.ajax({
+            url: "pegawai/cari-pegawai.php",
+            type: "GET",
+            data: { query: searchText },
+            success: function(data) {
+                $("#pegawaiTbody").html(data);
+            }
+        });
+    });
+
+    // Cari Data Pegawai Berkas dari Admin
+    $("#cariPegawaiBerkas").on("keyup", function() {
+        var searchText = $(this).val();
+
+        $.ajax({
+            url: "pegawai/cari-pegawai-berkas.php",
+            type: "GET",
+            data: { query: searchText },
+            success: function(data) {
+                $("#pegawaiBerkasTbody").html(data);
+            }
+        });
+    });
+
+    // Cari Data Pegawai Akun dari Admin
+    $("#cariPegawaiAkun").on("keyup", function() {
+        var searchText = $(this).val();
+
+        $.ajax({
+            url: "pegawai/cari-pegawai-akun.php",
+            type: "GET",
+            data: { query: searchText },
+            success: function(data) {
+                $("#pegawaiAkunTbody").html(data);
+            }
+        });
+    });
+    
     // Cari Berkas Pegawai dari Staff Pegawai
     $("#namaBerkasPegawai").on("keyup", function() {
         var searchText = $(this).val();

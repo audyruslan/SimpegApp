@@ -77,9 +77,5 @@ if($_SESSION["level"] == 1){
   <link rel="stylesheet" href="assets/css/style.css">
     <!-- Sweetalert2 -->
     <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body>

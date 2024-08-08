@@ -15,7 +15,7 @@
         <div class="card box-cari">
         <div class="card-body">
             <div class="d-flex justify-content-end">
-            <input type="text" class="form-control col-4 mb-3" id="nip" placeholder="Cari Pegawai...">
+            <input type="text" class="form-control col-4 mb-3" id="cariPegawaiAkun" placeholder="Cari Pegawai...">
             </div>
             <table class="table">
                 <thead class="text-center" style="background-color: #4067A7; color: white;">
@@ -28,7 +28,7 @@
                     <th>Aksi</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center" id="pegawaiAkunTbody">
                     <?php 
                     $no = 1;
                     $sqlPegawai = mysqli_query($conn, "SELECT * FROM tb_pegawai
