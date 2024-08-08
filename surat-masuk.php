@@ -42,9 +42,9 @@
                                       <option value="10">Oktober</option>
                                       <option value="11">November</option>
                                       <option value="12">Desember</option>
-                                    </select>
-                                    <button id="btnSurat" class="btn btn-sm rounded tombol-cari mr-3">Cari</button>
-                                    <input type="text" class="form-control col-4 form-cari mr-5" id="cariSurat" placeholder="Cari Surat Masuk...">
+                                </select>
+                                <button id="btnSurat" class="btn btn-sm rounded tombol-cari mr-3">Cari</button>
+                                <input type="text" class="form-control col-4 form-cari mr-5" id="cariSurat" placeholder="Cari Surat Masuk...">
                                 <button class="badge badge-pill badge-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Lihat
                                 </button>

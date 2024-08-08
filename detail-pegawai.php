@@ -111,6 +111,21 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
+                                    <label for="bidang">Bidang</label>
+                                    <select class="form-control" name="bidang" id="bidang" required>
+                                        <option value="">Pilih Bidang</option>
+                                        <option value="Bidang Sekretariat" <?= ($dataPegawai["bidang"] == "Bidang Sekretariat") ? "selected" : ""; ?>>Bidang Sekretariat</option>
+                                        <option value="Bidang PSP" <?= ($dataPegawai["bidang"] == "Bidang PSP") ? "selected" : ""; ?>>Bidang PSP</option>
+                                        <option value="Bidang Tanaman Pangan" <?= ($dataPegawai["bidang"] == "Bidang Tanaman Pangan") ? "selected" : ""; ?>>Bidang Tanaman Pangan</option>
+                                        <option value="Bidang Hortikultura" <?= ($dataPegawai["bidang"] == "Bidang Hortikultura") ? "selected" : ""; ?>>Bidang Hortikultura</option>
+                                        <option value="Bidang Penyuluhan" <?= ($dataPegawai["bidang"] == "Bidang Penyuluhan") ? "selected" : ""; ?>>Bidang Penyuluhan</option>
+                                        <option value="UPT Proteksi" <?= ($dataPegawai["bidang"] == "UPT Proteksi") ? "selected" : ""; ?>>UPT Proteksi</option>
+                                        <option value="UPT PMSB" <?= ($dataPegawai["bidang"] == "UPT PMSB") ? "selected" : ""; ?>>UPT PMSB</option>
+                                        <option value="UPT Pemberitaan" <?= ($dataPegawai["bidang"] == "UPT Pemberitaan") ? "selected" : ""; ?>>UPT Pemberitaan</option>
+                                        <option value="UPT Diklat" <?= ($dataPegawai["bidang"] == "UPT Diklat") ? "selected" : ""; ?>>UPT Diklat</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="jabatan_id">Tipe Jabatan</label>
                                     <select class="form-control" name="jabatan_id" id="jabatan_id">
                                         <option value="" disabled selected>Pilih Jabatan</option>

@@ -9,6 +9,7 @@ function ubah_pegawai($data)
 
     $jabatan_id = htmlspecialchars($data['jabatan_id']);
     $nama_lengkap = htmlspecialchars($data['nama_lengkap']);
+    $bidang = htmlspecialchars($data['bidang']);
     $nip_pegawai = htmlspecialchars($data['nip_pegawai']);
     $tmp_lahir_pegawai = htmlspecialchars($data['tmp_lahir_pegawai']);
     $tgl_lahir_pegawai = htmlspecialchars($data['tgl_lahir_pegawai']);
@@ -32,6 +33,7 @@ function ubah_pegawai($data)
             SET
             jabatan_id = '$jabatan_id',
             nama_lengkap = '$nama_lengkap',
+            bidang = '$bidang',
             nip_pegawai = '$nip_pegawai',
             tmp_lahir_pegawai = '$tmp_lahir_pegawai',
             tgl_lahir_pegawai = '$tgl_lahir_pegawai',
