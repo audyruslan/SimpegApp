@@ -174,7 +174,7 @@
                         <input type="hidden" name="pegawai_id" value="<?= $pegawai["pegawai_id"]; ?>">
                         <div class="form-group">
                             <label for="role_id">Jenis Akun</label>
-                            <select class="form-control" name="role_id" id="role_id">
+                            <select class="form-control" name="role_id" id="role_id" disabled>
                                 <option value="" disabled selected>Pilih Jenis Akun</option>
                                 <?php 
                                     $sqlRole = mysqli_query($conn, "SELECT * FROM tb_role");
