@@ -36,6 +36,11 @@
   <!-- jquery-validation -->
   <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
   <script src="plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
   <?php
     if (isset($_SESSION['status']) && $_SESSION['status'] != '') {

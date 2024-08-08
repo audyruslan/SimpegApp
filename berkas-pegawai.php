@@ -14,7 +14,7 @@
               <div class="d-flex justify-content-end">
                 <input type="text" class="form-control col-4 mb-3" id="nip" placeholder="Cari Pegawai...">
               </div>
-              <table class="table">
+              <table class="table" id="pegawaiTable">
                 <thead class="text-center" style="background-color: #4067A7; color: white;">
                   <tr>
                     <th>No</th>

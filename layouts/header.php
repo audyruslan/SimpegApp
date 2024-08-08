@@ -29,6 +29,7 @@ if($_SESSION["level"] == 1){
   $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas'"));
   // Total Data Surat Lainnya
   $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya'"));
+
 } else {
   $nip_pegawai = $_SESSION["nip_pegawai"];
   $sqlPegawai = mysqli_query($conn, "SELECT * FROM tb_pegawai WHERE nip_pegawai = '$nip_pegawai'");
@@ -48,6 +49,20 @@ if($_SESSION["level"] == 1){
   $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas'"));
   // Total Data Surat Lainnya
   $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya'"));
+
+  // ChartSurat
+  $sql = "SELECT tipe_surat, DATE_FORMAT(tgl_surat, '%m') as bulan, COUNT(*) as jumlah 
+          FROM tb_surat 
+          GROUP BY tipe_surat, bulan 
+          ORDER BY bulan";
+  $result = $conn->query($sql);
+
+  $data = [];
+  while($row = $result->fetch_assoc()) {
+    $bulan_indonesia = ['01' => 'Januari', '02' => 'Februari', '03' => 'Maret', '04' => 'April', '05' => 'Mei', '06' => 'Juni', '07' => 'Juli', '08' => 'Agustus', '09' => 'September', '10' => 'Oktober', '11' => 'November', '12' => 'Desember'];
+    $bulan = $bulan_indonesia[$row['bulan']];
+    $data[$row['tipe_surat']][$bulan] = $row['jumlah'];
+  }
 }
 
 ?>
@@ -62,5 +77,9 @@ if($_SESSION["level"] == 1){
   <link rel="stylesheet" href="assets/css/style.css">
     <!-- Sweetalert2 -->
     <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body>

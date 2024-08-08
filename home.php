@@ -19,7 +19,7 @@
                     <div class="d-flex justify-content-end">
                         <input type="text" class="form-control col-4 mb-3" id="nip" placeholder="Cari Pegawai...">
                     </div>
-                    <table class="table">
+                    <table class="table" id="pegawaiTable">
                         <thead class="text-center" style="background-color: #4067A7; color: white;">
                             <tr>
                             <th>No</th>
@@ -63,13 +63,54 @@
         <!-- Grafik Data Surat -->
          <div class="row mt-3">
             <div class="col-12">
-
+                <canvas id="suratChart"></canvas>
             </div>
          </div>
     <?php } ?>
 
-    
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const data = <?php echo json_encode($data); ?>;
+    
+    const labels = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+    const datasets = Object.keys(data).map(type => {
+        return {
+            label: type,
+            data: labels.map(month => data[type][month] || 0),
+            backgroundColor: '#4067A7',
+        };
+    });
+
+    const ctx = document.getElementById('suratChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1,
+                        callback: function(value) {
+                            if (Number.isInteger(value)) {
+                                return value;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+
     
 <?php 
     require 'layouts/footer.php';

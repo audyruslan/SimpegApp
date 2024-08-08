@@ -27,6 +27,20 @@ $(document).ready(function() {
     setupCollapseHandler('#collapseFour', '#suratTugas');
     setupCollapseHandler('#collapseFive', '#suratLainnya');
 
+    // dataTable
+    $("#pegawaiTable").DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+        "language": {
+            url: 'assets/json/id.json'
+        }
+    });
+
 
     // Cari Berkas Pegawai dari Admin
     $("#dataBerkasPegawai").on("keyup", function() {
