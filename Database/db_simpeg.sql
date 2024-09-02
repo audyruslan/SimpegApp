@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2024 at 11:01 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Sep 02, 2024 at 02:38 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `tb_admin` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `img_dir` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_admin`
@@ -57,7 +57,7 @@ CREATE TABLE `tb_berkas` (
   `tgl_berkas` date NOT NULL,
   `uraian_berkas` text NOT NULL,
   `berkas_dir` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_berkas`
@@ -87,8 +87,8 @@ DELIMITER ;
 
 CREATE TABLE `tb_jabatan` (
   `jabatan_id` int(11) NOT NULL,
-  `nama_jabatan` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nama_jabatan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_jabatan`
@@ -97,14 +97,13 @@ CREATE TABLE `tb_jabatan` (
 INSERT INTO `tb_jabatan` (`jabatan_id`, `nama_jabatan`) VALUES
 (1, 'Kepala Dinas'),
 (2, 'Sekretaris'),
-(3, 'Kepala Bidang'),
-(4, 'Kepala Seksi'),
+(3, 'Kepala Bidang / Kepala UPT'),
+(4, 'Kepala Sub Bagian / Kepala Seksi'),
 (5, 'Pegawai Tata Usaha'),
 (6, 'ASN/PNS'),
-(7, 'Penyuluh'),
-(8, 'Staf'),
-(9, 'Petugas'),
-(10, 'Lainnya');
+(7, 'Staf'),
+(8, 'Petugas '),
+(9, 'Lainnya');
 
 -- --------------------------------------------------------
 
@@ -138,7 +137,7 @@ CREATE TABLE `tb_pegawai` (
   `nip_suami_istri` varchar(50) NOT NULL,
   `alamat_pegawai` text NOT NULL,
   `img_dir` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_pegawai`
@@ -157,7 +156,7 @@ INSERT INTO `tb_pegawai` (`pegawai_id`, `role_id`, `jabatan_id`, `nama_lengkap`,
 CREATE TABLE `tb_role` (
   `role_id` int(11) NOT NULL,
   `role` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_role`
@@ -186,7 +185,7 @@ CREATE TABLE `tb_surat` (
   `uraian_surat` text NOT NULL,
   `surat_dir` varchar(255) NOT NULL,
   `tipe_surat` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_surat`
@@ -217,7 +216,7 @@ CREATE TABLE `tb_validasi_berkas` (
   `pegawai_id` int(11) NOT NULL,
   `berkas_id` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_validasi_berkas`

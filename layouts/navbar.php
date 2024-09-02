@@ -15,7 +15,7 @@
           <p><?= $role["role"]; ?></p>
         </div>
         <img src="admin/image/<?= $admin["img_dir"]; ?>" class="user-profile" alt="User Image">
-        <img src="assets/img/arrow_down.png" class="user-menu" alt="">
+        <!-- <img src="assets/img/arrow_down.png" class="user-menu" alt=""> -->
       </div>
       <?php }else{ ?>
         <div class="ml-auto">
@@ -24,7 +24,7 @@
           <p><?= $role["role"]; ?></p>
         </div>
         <img src="pegawai/image/<?= $pegawai["img_dir"]; ?>" class="user-profile" alt="User Image">
-        <img src="assets/img/arrow_down.png" class="user-menu" alt="">
+        <!-- <img src="assets/img/arrow_down.png" class="user-menu" alt=""> -->
       </div>
       <?php } ?>
   </nav>
