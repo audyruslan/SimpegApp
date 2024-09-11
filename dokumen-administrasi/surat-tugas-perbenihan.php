@@ -8,7 +8,7 @@ $pegawaiID = $_GET['pegawai_id'] ?? '';
 
 $query = "SELECT * FROM tb_surat 
           INNER JOIN tb_pegawai ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-          WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Tugas' AND tb_surat.bidang = 'UPT Pemberitaan'";
+          WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Tugas' AND tb_surat.bidang = 'UPT Perbenihan'";
 
 if (!empty($tahun)) {
     $query .= " AND YEAR(tgl_surat) = '$tahun'";
