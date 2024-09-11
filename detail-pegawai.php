@@ -1,6 +1,6 @@
 <?php
     $title = "Detail Pegawai";
-    $menu = "Detail Pegawai";
+    $menu = "Kelola Akun";
     require 'layouts/header.php';
     require 'layouts/navbar.php';
     require 'layouts/sidebar.php';
@@ -240,6 +240,12 @@
                                             }
                                         ?>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama_jabatan_pegawai">Nama Jabatan</label>
+                                    <input type="text" class="form-control" id="nama_jabatan_pegawai"
+                                        name="nama_jabatan_pegawai" value="<?= $dataPegawai["nama_jabatan_pegawai"]; ?>"
+                                        autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                     <label for="npwp_pegawai">NPWP</label>

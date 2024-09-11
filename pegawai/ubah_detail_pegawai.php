@@ -11,6 +11,7 @@ function ubah_pegawai($data)
     $nama_lengkap = htmlspecialchars($data['nama_lengkap']);
     $bidang = htmlspecialchars($data['bidang']);
     $nip_pegawai = htmlspecialchars($data['nip_pegawai']);
+    $nama_jabatan_pegawai = htmlspecialchars($data['nama_jabatan_pegawai']);
     $tmp_lahir_pegawai = htmlspecialchars($data['tmp_lahir_pegawai']);
     $tgl_lahir_pegawai = htmlspecialchars($data['tgl_lahir_pegawai']);
     $agama_pegawai = htmlspecialchars($data['agama_pegawai']);
@@ -35,6 +36,7 @@ function ubah_pegawai($data)
             nama_lengkap = '$nama_lengkap',
             bidang = '$bidang',
             nip_pegawai = '$nip_pegawai',
+            nama_jabatan_pegawai = '$nama_jabatan_pegawai',
             tmp_lahir_pegawai = '$tmp_lahir_pegawai',
             tgl_lahir_pegawai = '$tgl_lahir_pegawai',
             agama_pegawai = '$agama_pegawai',
