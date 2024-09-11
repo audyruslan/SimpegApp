@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2024 at 02:38 AM
+-- Generation Time: Sep 11, 2024 at 08:28 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -119,6 +119,7 @@ CREATE TABLE `tb_pegawai` (
   `bidang` varchar(50) NOT NULL,
   `nip_pegawai` varchar(50) NOT NULL,
   `password_pegawai` varchar(255) NOT NULL,
+  `nama_jabatan_pegawai` varchar(50) NOT NULL,
   `tmp_lahir_pegawai` varchar(50) NOT NULL,
   `tgl_lahir_pegawai` date NOT NULL,
   `agama_pegawai` varchar(50) NOT NULL,
@@ -143,9 +144,9 @@ CREATE TABLE `tb_pegawai` (
 -- Dumping data for table `tb_pegawai`
 --
 
-INSERT INTO `tb_pegawai` (`pegawai_id`, `role_id`, `jabatan_id`, `nama_lengkap`, `bidang`, `nip_pegawai`, `password_pegawai`, `tmp_lahir_pegawai`, `tgl_lahir_pegawai`, `agama_pegawai`, `status_perkawinan`, `no_hp_pegawai`, `pangkat_pegawai`, `pendidikan_terakhir`, `npwp_pegawai`, `ktp_pegawai`, `kapreg_pegawai`, `email_pegawai`, `unit_organisasi`, `unit_kerja`, `nama_suami_istri`, `pekerjaan`, `nip_suami_istri`, `alamat_pegawai`, `img_dir`) VALUES
-(1, 3, 3, 'Audy Ruslan', '', '198407132005012007', '$2y$10$fh42h.c2Yf3aKPZ5M8oO7uvSdvEoBdfdyWXH.aInOWo1hS.gnszEm', 'Kota Palu', '1999-01-07', 'Islam', 'Belum Menikah', '082259708665', '', '', '', '', '', '4udyruslan@gmail.com', '', '', '', '', '', 'BTN TAMAN RIA ESTATE', '1722746921.png'),
-(2, 2, 6, 'Fikran', 'Bidang Sekretariat', '198106022015022001', '$2y$10$u79gDNOjJNaQQrXSuuk5Ou2lj8Hiv/KV60mH18EW4emS5wXGcBClq', '', '0000-00-00', '', '', '', '', '', '', '', '', 'fikran@gmail.com', '', '', '', '', '', '', '1722754362.png');
+INSERT INTO `tb_pegawai` (`pegawai_id`, `role_id`, `jabatan_id`, `nama_lengkap`, `bidang`, `nip_pegawai`, `password_pegawai`, `nama_jabatan_pegawai`, `tmp_lahir_pegawai`, `tgl_lahir_pegawai`, `agama_pegawai`, `status_perkawinan`, `no_hp_pegawai`, `pangkat_pegawai`, `pendidikan_terakhir`, `npwp_pegawai`, `ktp_pegawai`, `kapreg_pegawai`, `email_pegawai`, `unit_organisasi`, `unit_kerja`, `nama_suami_istri`, `pekerjaan`, `nip_suami_istri`, `alamat_pegawai`, `img_dir`) VALUES
+(1, 3, 3, 'Audy Ruslan', '', '198407132005012007', '$2y$10$E71usH5IlvHpH2N8vPQiG.1mqFHTT.eCUZRHHrlbklHIIY92F5.xO', '', 'Kota Palu', '1999-01-07', 'Islam', 'Belum Menikah', '082259708665', '', '', '', '', '', '4udyruslan@gmail.com', '', '', '', '', '', 'BTN TAMAN RIA ESTATE', '1722746921.png'),
+(2, 2, 6, 'Fikran', 'Bidang Sekretariat', '198106022015022001', '$2y$10$u79gDNOjJNaQQrXSuuk5Ou2lj8Hiv/KV60mH18EW4emS5wXGcBClq', '', '', '0000-00-00', '', '', '', '', '', '', '', '', 'fikran@gmail.com', '', '', '', '', '', '', '1722754362.png');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,8 @@ INSERT INTO `tb_surat` (`surat_id`, `pegawai_id`, `tahun_surat`, `bidang`, `peri
 (8, 2, 2024, 'Bidang Sekretariat', 'Transkip Nilai', '2024-08-18', '0000-00-00', '1234', '', 'Transkip Nilai_Bidang Sekretariat.pdf', 'Surat Tugas'),
 (9, 2, 2024, 'Bidang PSP', 'KHS', '2024-09-22', '0000-00-00', '1234', '', 'KHS_Bidang PSP.pdf', 'Surat Tugas'),
 (10, 2, 2024, 'Bidang Sekretariat', 'KHS', '2024-08-25', '0000-00-00', '1234', '', 'KHS_Bidang Sekretariat.pdf', 'Surat Lainnya'),
-(11, 2, 2024, 'Bidang PSP', 'Pengesahan', '2024-09-28', '0000-00-00', '12345', '', 'Pengesahan_Bidang PSP.pdf', 'Surat Lainnya');
+(11, 2, 2024, 'Bidang PSP', 'Pengesahan', '2024-09-28', '0000-00-00', '12345', '', 'Pengesahan_Bidang PSP.pdf', 'Surat Lainnya'),
+(12, 2, 2024, 'UPT Perbenihan', 'Coba', '2024-09-17', '2024-09-26', '454353', '', 'Coba_UPT Perbenihan.pdf', 'Surat Masuk');
 
 -- --------------------------------------------------------
 
@@ -313,7 +315,7 @@ ALTER TABLE `tb_role`
 -- AUTO_INCREMENT for table `tb_surat`
 --
 ALTER TABLE `tb_surat`
-  MODIFY `surat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `surat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_validasi_berkas`
