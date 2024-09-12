@@ -217,9 +217,9 @@
                                         <option value="UPT PMSB"
                                             <?= ($dataPegawai["bidang"] == "UPT PMSB") ? "selected" : ""; ?>>UPT PMSB
                                         </option>
-                                        <option value="UPT Pemberitaan"
-                                            <?= ($dataPegawai["bidang"] == "UPT Pemberitaan") ? "selected" : ""; ?>>UPT
-                                            Pemberitaan</option>
+                                        <option value="UPT Perbenihan"
+                                            <?= ($dataPegawai["bidang"] == "UPT Perbenihan") ? "selected" : ""; ?>>UPT
+                                            Perbenihan</option>
                                         <option value="UPT Diklat"
                                             <?= ($dataPegawai["bidang"] == "UPT Diklat") ? "selected" : ""; ?>>UPT
                                             Diklat</option>
