@@ -1,6 +1,7 @@
 <?php 
     $title = "Dokumen Sekretariat";
     $menu = "Dokumen Sekretariat";
+    $bidang_menu = "Bidang Sekretariat";
     require 'layouts/header.php';
     require 'layouts/navbar.php';
     require 'layouts/sidebar.php';
@@ -17,7 +18,7 @@
     </div>
 
     <?php 
-        require_once 'layouts/data-surat.php';
+        require_once 'layouts/data-surat-admin.php';
     ?>
 
     <div class="row mt-2">

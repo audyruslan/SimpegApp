@@ -1,6 +1,7 @@
 <?php 
     $title = "Dokumen UPT Perbenihan";
     $menu = "Dokumen UPT Perbenihan";
+    $bidang_menu = "UPT Perbenihan";
     require 'layouts/header.php';
     require 'layouts/navbar.php';
     require 'layouts/sidebar.php';
@@ -12,12 +13,12 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 main-content">
     <div class="row judul">
         <div class="col-12">
-            <h2>Dokumen Administrasi Dokumen UPT Perbenihan</h2>
+            <h2>Dokumen Administrasi UPT Perbenihan</h2>
         </div>
     </div>
 
     <?php 
-        require_once 'layouts/data-surat.php';
+        require_once 'layouts/data-surat-admin.php';
     ?>
 
     <div class="row mt-2">
