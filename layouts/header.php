@@ -40,17 +40,18 @@ if($_SESSION["level"] == 1){
   $role = mysqli_fetch_assoc($sqlRole);
 
   $bidang = $pegawai["bidang"];
+  $pegawai_id = $pegawai["pegawai_id"];
 
   // Total Data Surat Masuk
-  $totSuratMasuk = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Masuk' AND bidang = '$bidang'"));
+  $totSuratMasuk = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Masuk' AND pegawai_id = '$pegawai_id'"));
   // Total Data Surat Keluar
-  $totSuratKeluar = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keluar' AND bidang = '$bidang'"));
+  $totSuratKeluar = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keluar' AND pegawai_id = '$pegawai_id'"));
   // Total Data Surat Keputusan
-  $totSuratKeputusan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keputusan' AND bidang = '$bidang'"));
+  $totSuratKeputusan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Keputusan' AND pegawai_id = '$pegawai_id'"));
   // Total Data Surat Tugas
-  $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas' AND bidang = '$bidang'"));
+  $totSuratTugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Tugas' AND pegawai_id = '$pegawai_id'"));
   // Total Data Surat Lainnya
-  $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya' AND bidang = '$bidang'"));
+  $totSuratLainnya = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_surat WHERE tipe_surat = 'Surat Lainnya' AND pegawai_id = '$pegawai_id'"));
 
   // ChartSurat
   $sql = "SELECT tipe_surat, DATE_FORMAT(tgl_surat, '%m') as bulan, COUNT(*) as jumlah 
@@ -70,14 +71,17 @@ if($_SESSION["level"] == 1){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $title; ?> | SimpegApp</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title; ?> | SimpegApp</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Sweetalert2 -->
     <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
 </head>
+
 <body>
