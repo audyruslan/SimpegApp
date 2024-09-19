@@ -23,7 +23,7 @@ if (!empty($keyword)) {
 $sqlSurat = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($sqlSurat) > 0) {
-    while($surat = mysqli_fetch_assoc($sqlSurat)) {
+    while($surat = mysqli_fetch_assoc($sqlSurat)) { 
     echo '<div class="col-2">
             <div class="card text-center">
                 <img src="assets/img/pdf.png" alt="PDF">
@@ -31,7 +31,7 @@ if (mysqli_num_rows($sqlSurat) > 0) {
                     <h3>' . $surat["perihal_surat"] . '</h3>
                     <p>' . $surat["tgl_surat"] . '</p>
                     <div class="d-flex tombol">
-                        <a href="detail-surat-masuk.php?surat_id=' . $surat["surat_id"] . '" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                        <a href="detail-surat-masuk.php?surat_id=' . $surat["surat_id"] . '%" class="badge badge-pill badge-primary mr-1">Lihat</a>
                         <span class="badge badge-pill badge-dark ml-1">Cetak</span>
                     </div>
                 </div>

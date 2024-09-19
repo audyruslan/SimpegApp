@@ -31,7 +31,7 @@ if (mysqli_num_rows($sqlSurat) > 0) {
                     <h3>' . $surat["perihal_surat"] . '</h3>
                     <p>' . $surat["tgl_surat"] . '</p>
                     <div class="d-flex tombol">
-                        <a href="lihat-detail-surat.php?surat_id=' . $surat["surat_id"] . '" class="badge badge-pill badge-primary mr-1">Lihat</a>
+                        <a href="lihat-detail-surat.php?surat_id=' . $surat["surat_id"] . '&tipe_surat=Surat Masuk" class="badge badge-pill badge-primary mr-1">Lihat</a>
                         <span class="badge badge-pill badge-dark ml-1">Cetak</span>
                     </div>
                 </div>
