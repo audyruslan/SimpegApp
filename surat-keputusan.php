@@ -63,7 +63,7 @@
                             $sqlSurat = mysqli_query($conn, "SELECT * FROM tb_surat
                                                                 INNER JOIN tb_pegawai
                                                                 ON tb_surat.pegawai_id = tb_pegawai.pegawai_id 
-                                                                WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keputusan'");
+                                                                WHERE tb_surat.pegawai_id = $pegawaiID AND tb_surat.tipe_surat = 'Surat Keputusan' AND tb_surat.bidang = '$bidang'");
                             if (mysqli_num_rows($sqlSurat) > 0) {
                                 while($surat = mysqli_fetch_assoc($sqlSurat)) {
                         ?>
