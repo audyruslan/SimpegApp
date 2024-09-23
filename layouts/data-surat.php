@@ -12,7 +12,7 @@
             <div class="card-body">
                 <p class="card-text">Surat Keluar</p>
                 <h2 class="card-title"><?= $totSuratKeluar; ?></h2>
-            </div> 
+            </div>
         </div>
     </div>
     <div class="card-col mb-3">
